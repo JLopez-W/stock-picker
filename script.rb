@@ -17,9 +17,11 @@ def stock_picker(stock_prices)
   profit = []
   profit.push(stock_pick[2])
   stock_pick.pop
-  p stock_pick
+  stock_pick
   profit
-  p "Buy at $#{stock_pick[0]} and sell at $#{stock_pick[1]} for a profit of $#{profit[0]}"
+  puts "Stock price options are:\n#{stock_prices}\n\n"
+  p stock_pick
+  puts "Buy at $#{stock_pick[0]} and sell at $#{stock_pick[1]} for a profit of $#{profit[0]}"
 end
 
 stock_picker(stock_prices)

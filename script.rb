@@ -7,13 +7,18 @@ def stock_picker(stock_prices)
   pairs
 
   pairs.each do |pair| 
-  profit = pair[1] - pair[0]
-  pair.push(profit)
-  pairs
+    profit = pair[1] - pair[0]
+    pair.push(profit)
+    pairs
   end
   stock_choices = pairs.sort_by { |pair| pair[2] }
   stock_pick = stock_choices.last
-  stock_pick
+  profit = []
+  profit.push(stock_pick[-1])
+  stock_pick.pop
+  p stock_pick
+  profit
+  p "Buy at $#{stock_pick[0]} and sell at $#{stock_pick[1]} for a profit of $#{profit[-1]}"
 end
 
-p stock_picker(stock_prices)
+stock_picker(stock_prices)

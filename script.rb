@@ -15,7 +15,7 @@ def stock_picker(stock_prices)
   stock_choices = pairs.sort_by { |pair| pair[2] }
   stock_pick = stock_choices.last
   profit = []
-  profit.push(stock_pick[-1])
+  profit.push(stock_pick[2])
   stock_pick.pop
   p stock_pick
   profit

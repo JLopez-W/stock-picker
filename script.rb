@@ -11,6 +11,7 @@ def stock_picker(stock_prices)
     pair.push(profit)
     pairs
   end
+
   stock_choices = pairs.sort_by { |pair| pair[2] }
   stock_pick = stock_choices.last
   profit = []

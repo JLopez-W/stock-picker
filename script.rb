@@ -4,13 +4,16 @@ def stock_picker(stock_prices)
   pairs = []
   stock_prices.combination(2) { |combination| pairs.push(combination) }
   pairs.keep_if {|buy, sell| sell > buy }
-  p pairs
+  pairs
 
   pairs.each do |pair| 
   profit = pair[1] - pair[0]
-  p pair.push(profit)
+  pair.push(profit)
   pairs
   end
+  stock_choices = pairs.sort_by { |pair| pair[2] }
+  stock_pick = stock_choices.last
+  stock_pick
 end
 
 p stock_picker(stock_prices)

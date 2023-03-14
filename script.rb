@@ -19,7 +19,7 @@ def stock_picker(stock_prices)
   stock_pick.pop
   p stock_pick
   profit
-  p "Buy at $#{stock_pick[0]} and sell at $#{stock_pick[1]} for a profit of $#{profit[-1]}"
+  p "Buy at $#{stock_pick[0]} and sell at $#{stock_pick[1]} for a profit of $#{profit[0]}"
 end
 
 stock_picker(stock_prices)
